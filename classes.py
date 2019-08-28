@@ -10,11 +10,12 @@ class Pizza:
         self.toppings = []
 
     def add_topping(self, topping):
-        self.toppings = topping
-        print(self.toppings)
+        self.toppings.append(topping) 
 
     def print_order(self):
-        print(f'I would like a {self.size}-inch, {self.style} with {self.toppings} and ')
+        sep = " and "
+        list_toppings = sep.join(self.toppings)
+        print(f'I would like a {self.size}-inch, {self.style} with {list_toppings}')
 
 
 # 4. Make two different instances of a pizza. If you have properly defined the class, you should be able to do something like the following code with your Pizza type.
