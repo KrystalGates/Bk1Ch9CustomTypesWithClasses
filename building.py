@@ -22,8 +22,8 @@ class Building:
     def purchase(self, owner):
         self.owner = owner
 
-    def print_building_info(self):
-        print(f'{self.address} was purchased by {self.owner} Builder on  {self.date_constructed} and has {self.stories} stories.')
+    def __str__(self):
+        return f'{self.address} was purchased by {self.owner} Builder on  {self.date_constructed} and has {self.stories} stories.'
 
 # Methods
 # Define a construct() method. The method's logic should set the date_constructed field's value to datetime.datetime.now(). You will need to have import datetime at the top of your file.
@@ -42,27 +42,27 @@ class Building:
 eight_hundred_eighth = Building("800 8th Street", 12)
 eight_hundred_eighth.purchase("Bobby")
 eight_hundred_eighth.construct()
-eight_hundred_eighth.print_building_info()
+# eight_hundred_eighth.print_building_info()
 
 fourty_fifth = Building("402 45th Street", 14)
 fourty_fifth.purchase("Rover")
 fourty_fifth.construct()
-fourty_fifth.print_building_info()
+# fourty_fifth.print_building_info()
 
 broadway = Building("700 Broadway Street", 5)
 broadway.purchase("Jacob")
 broadway.construct()
-broadway.print_building_info()
+# broadway.print_building_info()
 
 seasame = Building("123 Sesame Street", 36)
 seasame.purchase("Big Bird")
 seasame.construct()
-seasame.print_building_info()
+# seasame.print_building_info()
 
 charlotte = Building("67 Charlotte Street", 9)
 charlotte.purchase("Smalls")
 charlotte.construct()
-charlotte.print_building_info()
+# charlotte.print_building_info()
 # Have each one get purchased by a real estate magnate
 # After purchased, construct each one
 # Once all building are purchased and constructed, print the address, owner, stories, and date constructed to the terminal for each one.
